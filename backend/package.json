@@ -1,7 +1,7 @@
 {
   "name": "fresher-alert-backend",
   "version": "1.0.0",
-  "description": "FresherAlert backend — scrapes fresher jobs and sends Telegram alerts",
+  "description": "FirstApply backend — scrapes fresher jobs and sends Telegram alerts",
   "type": "module",
   "main": "src/index.js",
   "scripts": {

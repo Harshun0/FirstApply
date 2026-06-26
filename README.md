@@ -1,6 +1,6 @@
-# 🚨 FresherAlert
+# 🚨 FirstApply
 
-Get **fresher job alerts on Telegram — instantly**. FresherAlert scrapes 6+ job
+Get **fresher job alerts on Telegram — instantly**. FirstApply scrapes 6+ job
 sites every 2 minutes, matches new listings against your filters, and DMs them
 to you on Telegram.
 

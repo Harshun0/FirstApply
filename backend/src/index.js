@@ -27,7 +27,7 @@ app.get('/api/health', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.json({ name: 'FresherAlert API', status: 'running' });
+  res.json({ name: 'FirstApply API', status: 'running' });
 });
 
 // ---------------------------------------------------------------------------
@@ -67,7 +67,7 @@ function registerBotCommands() {
           const f = session.filters || {};
           await bot.sendMessage(
             chatId,
-            `🎉 *You're all set!*\n\nFresherAlert will now DM you matching fresher jobs.\n\n` +
+            `🎉 *You're all set!*\n\nFirstApply will now DM you matching fresher jobs.\n\n` +
               `*Roles:* ${(f.roles || []).join(', ') || 'any'}\n` +
               `*Locations:* ${(f.locations || []).join(', ') || 'any'}\n` +
               `*Experience:* ${(f.experience || []).join(', ') || 'any'}\n\n` +
@@ -90,7 +90,7 @@ function registerBotCommands() {
 
     await bot.sendMessage(
       chatId,
-      `Welcome to *FresherAlert*! 🚀\n\nGo to ${FRONTEND_URL || 'our website'} to set up your job alerts in one tap.`,
+      `Welcome to *FirstApply*! 🚀\n\nGo to ${FRONTEND_URL || 'our website'} to set up your job alerts in one tap.`,
       { parse_mode: 'Markdown' }
     );
   });
@@ -124,7 +124,7 @@ function registerBotCommands() {
       const f = user.filters || {};
       await bot.sendMessage(
         chatId,
-        `📋 *Your FresherAlert settings*\n\n` +
+        `📋 *Your FirstApply settings*\n\n` +
           `Status: ${user.isActive ? '🟢 Active' : '🔴 Paused'}\n` +
           `*Roles:* ${(f.roles || []).join(', ') || 'any'}\n` +
           `*Locations:* ${(f.locations || []).join(', ') || 'any'}\n` +
@@ -141,7 +141,7 @@ function registerBotCommands() {
     const chatId = msg.chat.id;
     await bot.sendMessage(
       chatId,
-      `*FresherAlert commands*\n\n` +
+      `*FirstApply commands*\n\n` +
         `/start – get started\n` +
         `/status – view your current filters\n` +
         `/stop – pause alerts\n` +
@@ -185,7 +185,7 @@ async function start() {
     startScheduler();
 
     app.listen(PORT, () => {
-      console.log(`🚀 FresherAlert backend listening on port ${PORT}`);
+      console.log(`🚀 FirstApply backend listening on port ${PORT}`);
     });
   } catch (err) {
     console.error('❌ Failed to start server:', err.message);

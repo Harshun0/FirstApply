@@ -2,22 +2,22 @@ import Link from 'next/link';
 import SetupForm from '../../components/SetupForm';
 
 export const metadata = {
-  title: 'Set Up Your Alerts — FresherAlert',
+  title: 'Set Up Your Alerts — FirstApply',
 };
 
 export default function SetupPage() {
   return (
-    <main className="min-h-screen">
-      <header className="mx-auto flex max-w-3xl items-center justify-between px-6 py-6">
-        <Link href="/" className="text-lg font-bold">
-          <span className="text-accent">Fresher</span>Alert
+    <main style={{ background: 'var(--background-color)', color: 'var(--text-color)', minHeight: '100vh' }}>
+      <header style={{ maxWidth: 1100, margin: '0 auto', padding: '0 24px', height: 60, display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <Link href="/" style={{ fontSize: 18, fontWeight: 700, letterSpacing: '-0.5px' }}>
+          <span style={{ color: 'var(--primary-orange)' }}>First</span>Apply
         </Link>
-        <Link href="/" className="text-sm text-slate-400 transition hover:text-accent">
+        <Link href="/" style={{ fontSize: 13, color: 'var(--secondary-text)', textDecoration: 'none' }}>
           ← Back home
         </Link>
       </header>
 
-      <section className="mx-auto max-w-3xl px-6 pb-20 pt-4">
+      <section style={{ maxWidth: 780, margin: '0 auto', padding: '80px 24px 60px', textAlign: 'center' }}>
         <SetupForm />
       </section>
     </main>

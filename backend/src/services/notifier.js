@@ -22,7 +22,7 @@ export async function sendAlert(chatId, job) {
     `🎓 ${experience}\n` +
     `🌐 Source: ${source}\n\n` +
     `🔗 [Apply Now](${link})\n\n` +
-    `_Powered by FresherAlert_`;
+    `_Powered by FirstApply_`;
 
   try {
     await bot.sendMessage(chatId, message, {

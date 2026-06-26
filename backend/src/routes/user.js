@@ -45,7 +45,7 @@ router.post('/register', async (req, res) => {
     // Best-effort welcome message; don't fail registration if Telegram is down.
     await sendMessage(
       chatId,
-      `🎉 *You're all set!*\n\nFresherAlert will now DM you matching fresher jobs.\n\n` +
+      `🎉 *You're all set!*\n\nFirstApply will now DM you matching fresher jobs.\n\n` +
         `*Roles:* ${cleanFilters.roles.join(', ') || 'any'}\n` +
         `*Locations:* ${cleanFilters.locations.join(', ') || 'any'}\n` +
         `*Experience:* ${cleanFilters.experience.join(', ') || 'any'}\n\n` +
