@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: fresher-alert-backend
+    env: node
+    plan: free
+    rootDir: backend
+    # Install deps, then ensure Chromium is present for the Puppeteer scrapers
+    # (Naukri/Indeed). .puppeteerrc.cjs caches it into the project dir.
+    buildCommand: npm install && npx puppeteer browsers install chrome
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 5000
+      # Keep Chromium cache inside the project so build + runtime agree.
+      - key: PUPPETEER_CACHE_DIR
+        value: /opt/render/project/src/backend/.cache/puppeteer
+      - key: MONGODB_URI
+        sync: false
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
